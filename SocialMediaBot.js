@@ -657,7 +657,7 @@ function facebookApiCallback(server, facebookPage, res) {
 				facebookPage.timestamp = res.posts.data[0].created_time;
 			} else if(defaultChannel) {
 				defaultChannel.send(embed).then(
-					print("Sent Facebook embed to channel '" + defaultChannel.name + "' on server '" + server.name + "'."));
+					print("https://www.facebook.com/herowarsgame '" + defaultChannel.name + "' on server '" + server.name + "'."));
 				facebookPage.timestamp = res.posts.data[0].created_time;
 			}
 		} catch(err) {
