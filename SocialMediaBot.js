@@ -652,12 +652,12 @@ function facebookApiCallback(server, facebookPage, res) {
 			if(channels.length !== 0) {
 				for(let i = 0; i < channels.length; i++) {
 					channels[i].send(embed).then(
-						print("https://www.facebook.com/herowarsgame '" + channels[i].name + "' on server '" + server.name + "'."));
+						print("Sent Facebook embed to channel '" + channels[i].name + "' on server '" + server.name + "'."));
 				}
 				facebookPage.timestamp = res.posts.data[0].created_time;
 			} else if(defaultChannel) {
 				defaultChannel.send(embed).then(
-					print("https://www.facebook.com/herowarsgame '" + defaultChannel.name + "' on server '" + server.name + "'."));
+					print("Sent Facebook embed to channel '" + defaultChannel.name + "' on server '" + server.name + "'."));
 				facebookPage.timestamp = res.posts.data[0].created_time;
 			}
 		} catch(err) {
